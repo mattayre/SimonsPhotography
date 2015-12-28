@@ -408,12 +408,12 @@ body > .navbar-collapse a {
 }
 
 .navbar-default {
-  background-color: white;
+  background:rgba(0,0,0,.8);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 10px;
 }
 .navbar-default .navbar-nav > li > a:not(.btn) {
-  color: #343434;
+  color: white;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:not(.btn):hover,
@@ -441,7 +441,7 @@ body > .navbar-collapse a {
   background-color: transparent;
 }
 .navbar-default .navbar-brand {
-  color: #343434;
+  color: white;
 }
 .navbar-default:not(.navbar-transparent) .btn-default:hover {
   color: #c5a47e;
@@ -2598,7 +2598,7 @@ body.noscroll {
   height: 100%;
   color: white;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0);
   -webkit-transition: background 0.5s, opacity 0.5s 0.5s;
   -moz-transition: background 0.5s, opacity 0.5s 0.5s;
   -o-transition: background 0.5s, opacity 0.5s 0.5s;
@@ -3839,4 +3839,17 @@ body.noscroll {
       height: 0px;
       background-attachment: scroll;
     }
+}
+
+.project img{
+  
+   -webkit-transition: all 1s;
+  -webkit-transform:scale(1);
+  transform:scale(1);
+}
+.project:hover img {
+   -webkit-filter:brightness(50%);
+  -webkit-transition: all 1s;
+  -webkit-transform:scale(1);
+  transform:scale(1);
 }
