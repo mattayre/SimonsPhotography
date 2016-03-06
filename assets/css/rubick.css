@@ -2849,6 +2849,7 @@ body.noscroll {
 }
 .project-content.has-background {
   background: #343434;
+  
 }
 .project-content > div {
   visibility: hidden;
@@ -3871,6 +3872,10 @@ body.noscroll {
 .project-details {
   background-color: black;
 }
+.project-content.has-background {
+  background: black;
+}
+/* changes spped of modal load*/
 
 
 /*display blocks  @media  instead of none so the -web-kit-filter brightness works on small screens */
