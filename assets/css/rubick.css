@@ -3849,7 +3849,38 @@ body.noscroll {
 }
 .project:hover img {
    -webkit-filter:brightness(50%);
-  -webkit-transition: all 1s;
-  -webkit-transform:scale(1);
-  transform:scale(1);
+  -webkit-transition: all 4s;
+  -webkit-transform:scale(1.5);
+  transform:scale(1.5);
+}
+.section-with-hover .project .over-area {
+  opacity:1;
+
+}
+.section-with-hover .project .over-area .content {
+  opacity:1;
+  text-align:center;
+}
+.section-with-hover .project .over-area .content h4{
+  opacity:1;
+}
+/* change modal background color to black*/
+.project-content {
+  background-color: black;
+}
+.project-details {
+  background-color: black;
+}
+
+
+/*display blocks  @media  instead of none so the -web-kit-filter brightness works on small screens */
+@media(max-width: 991px) and (min-width: 768px){
+   .hidden-sm{
+    display: block !important;
+    }
+}
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: block !important;
+  }
 }
