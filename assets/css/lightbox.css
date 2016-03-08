@@ -1,0 +1,36 @@
+div.lightboxdivclass{
+    display:inline-block;
+    background-color:black;
+    padding:5px;
+    }
+
+img.lightboximageclass {
+    max-height:100%;
+    border:0px;
+    opacity:1;
+    }
+
+p.lighboxcaptionclass {
+    padding:20px 0px 0px 0px;
+    opacity:1;
+    background-color:#FFFEE9;
+    font-family:"arial";
+    color:black;
+    display:none;
+    }
+
+#lightboxwindow { 
+    display:none; 
+    position:fixed;
+    width:100%;
+    left:0px;
+    right:0px; 
+    top:0px;
+    bottom:0px;
+    padding:20px; 
+    background-color:rgba(16,16,16,0.9);
+    border:0px;
+    text-align:center;
+    font-weight:bold;
+    z-index:2001; 
+    } 

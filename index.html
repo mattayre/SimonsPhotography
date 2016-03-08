@@ -18,6 +18,8 @@
   <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
   <link href="assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
 
+  <link href="assets/css/lightbox.css" rel="stylesheet" />
+  <script src="assets/js/lightbox.js"></script>
 </head>
 
 <body id="skrollr-body">
@@ -27,6 +29,15 @@
     <img class="loader" src="assets/img/rubik.svg"/>
   </div>
 </div>
+
+ <!-- lightbox window -->
+  <div id="lightboxwindow" onclick="CloseLightbox();">
+    <div class="lightboxdivclass">
+      <img id="lightboximage" class="lightboximageclass" onload="LoadLightbox()" alt="" src="<dynamic>"><br> 
+      <p id="lighboxcaption" class="lighboxcaptionclass"><br></p>
+    </div>
+  </div>
+
   <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
   <nav class="navbar navbar-default navbar-burger navbar-transparent navbar-fixed-top" style="height:100px;opacity:0.7"role="navigation">
       
@@ -46,12 +57,7 @@
         <ul class="nav navbar-nav navbar-right">
               <li>
                   <a href="" data-scroll="true" data-id="#whoWeAre" class="active"> 
-                      About
-                  </a>
-              </li>
-              <li>
-                  <a href="" data-scroll="true" data-id="#values"> 
-                     Projects
+                      About Me
                   </a>
               </li>
               <li>
@@ -61,7 +67,7 @@
               </li>
               <li>
                   <a href="" data-scroll="true" data-id="#clients"> 
-                      Morroco
+                      Black & White
                   </a>
               </li>
               <li>
@@ -71,12 +77,17 @@
               </li>
               <li>
                   <a href="" data-scroll="true" data-id="#numbers"> 
-                      Profile
+                      Experimental
                   </a>
               </li>
               <li>
                   <a href="" data-scroll="true" data-id="#contact"> 
-                      Contact
+                      Thailand and Laos
+                  </a>
+              </li>
+              <li>
+                  <a href="" data-scroll="true" data-id="#contact"> 
+                      Morroco
                   </a>
               </li>
          </ul>
@@ -150,7 +161,7 @@
          <div class="text-area">
             <div class="title ">
                 <h5 class="text-gray"></h5>
-                <h2>Projects</h2>
+                <h2>Photography</h2>
                 <div class="separator-container">
                     <div class="separator line-separator">⌘</div>
                 </div>
@@ -220,18 +231,7 @@
                       </a>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="project ">
-                      <img src="assets/img/bank.jpg"style="-webkit-filter:brightness(90%)"/>
-                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_10">
-                           <div class="content">
-                              <h4>BANGKOK<br></h4>
-                              <p></p>
-                              <p></p>
-                          </div>
-                      </a>
-                </div>
-            </div>
+            
             <div class="col-md-6">
                 <div class="project ">
                       <img src="assets/img/cam3.jpg"style="-webkit-filter:brightness(90%)"/>
@@ -256,6 +256,18 @@
                         </div>
                     </a>
                  </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project ">
+                      <img src="assets/img/bank.jpg"style="-webkit-filter:brightness(90%)"/>
+                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_10">
+                           <div class="content">
+                              <h4>BANGKOK<br></h4>
+                              <p></p>
+                              <p></p>
+                          </div>
+                      </a>
+                </div>
             </div>
             <div class="col-md-6">
                 <div class="project ">
@@ -361,28 +373,7 @@
      <footer class="footer footer-color-black">
       <div class="container">
           <nav class="pull-left">
-              <ul>
-                  <li>
-                      <a href="#">
-                          Home
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#">
-                          Projects
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#">
-                          About
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#">
-                         Contact
-                      </a>
-                  </li>
-              </ul>
+              
           </nav>
           <div class="social-area pull-right">                
               <a class="btn btn-social btn-facebook btn-simple">
@@ -391,12 +382,10 @@
               <a class="btn btn-social btn-twitter btn-simple">
                   <i class="fa fa-twitter"></i>
               </a>
-              <a class="btn btn-social btn-pinterest btn-simple">
-                  <i class="fa fa-pinterest"></i>
-              </a>
+             
           </div>
           <div class="copyright">
-              &copy; 2015 Matt Ayre
+              &copy; 2016 Matt Ayre
           </div>
       </div>
   </footer>
@@ -423,106 +412,26 @@
           </div>
           <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam1.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam2.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam3.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam4.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam5.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam6.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam7.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam8.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam9.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam10.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam11.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam12.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam13.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam14.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam15.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam16.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam17.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam18.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam19.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/cam20.jpg"/>
-                    </div>
-                </div>
+               <script>CreateImage('cam1.jpg','Description of ');</script>
+                <script>CreateImage('cam2.jpg','Description of ');</script>
+                <script>CreateImage('cam3.jpg','Description of ');</script>
+                <script>CreateImage('cam4.jpg','Description of ');</script>
+                <script>CreateImage('cam5.jpg','Description of ');</script>
+                <script>CreateImage('cam6.jpg','Description of ');</script>
+                <script>CreateImage('cam7.jpg','Description of ');</script>
+                <script>CreateImage('cam8.jpg','Description of ');</script>
+                <script>CreateImage('cam9.jpg','Description of ');</script>
+                <script>CreateImage('cam10.jpg','Description of ');</script>
+                <script>CreateImage('cam11.jpg','Description of ');</script>
+                <script>CreateImage('cam12.jpg','Description of ');</script>
+                <script>CreateImage('cam13.jpg','Description of ');</script>
+                <script>CreateImage('cam14.jpg','Description of ');</script>
+                <script>CreateImage('cam15.jpg','Description of ');</script>
+                <script>CreateImage('cam16.jpg','Description of ');</script> 
+                <script>CreateImage('cam17.jpg','Description of ');</script>
+                <script>CreateImage('cam18.jpg','Description of ');</script>
+                <script>CreateImage('cam19.jpg','Description of ');</script>
+                <script>CreateImage('cam20.jpg','Description of ');</script>
             </div>
           </div>
         </div>
@@ -550,157 +459,37 @@
           </div>
           <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor4.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor3.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor2.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor1.jpg"/>
-                    </div>
-                </div>
-                
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor6.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor7.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor8.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor9.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor10.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor11.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor12.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor13.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor14.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor15.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor16.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor17.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor18.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor19.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor20.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor21.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor22.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor23.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor24.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor25.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor26.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor27.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor28.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor29.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor30.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/mor5.jpg"/>
-                    </div>
-                </div>  
+                <script>CreateImage('mor4.jpg','Description of ');</script>
+                <script>CreateImage('mor3.jpg','Description of ');</script>
+                <script>CreateImage('mor2.jpg','Description of ');</script>
+                <script>CreateImage('mor1.jpg','Description of ');</script>
+                <script>CreateImage('mor6.jpg','Description of ');</script>
+                <script>CreateImage('mor7.jpg','Description of ');</script>
+                <script>CreateImage('mor8.jpg','Description of ');</script>
+                <script>CreateImage('mor9.jpg','Description of ');</script>
+                <script>CreateImage('mor10.jpg','Description of ');</script>
+                <script>CreateImage('mor11.jpg','Description of ');</script>
+                <script>CreateImage('mor12.jpg','Description of ');</script>
+                <script>CreateImage('mor13.jpg','Description of ');</script>
+                <script>CreateImage('mor14.jpg','Description of ');</script>
+                <script>CreateImage('mor15.jpg','Description of ');</script>
+                <script>CreateImage('mor16.jpg','Description of ');</script>
+                <script>CreateImage('mor17.jpg','Description of ');</script> 
+                <script>CreateImage('mor18.jpg','Description of ');</script>
+                <script>CreateImage('mor19.jpg','Description of ');</script>
+                <script>CreateImage('mor20.jpg','Description of ');</script>
+                <script>CreateImage('mor21.jpg','Description of ');</script>
+                <script>CreateImage('mor22.jpg','Description of ');</script>
+                <script>CreateImage('mor23.jpg','Description of ');</script>
+                <script>CreateImage('mor24.jpg','Description of ');</script>
+                <script>CreateImage('mor25.jpg','Description of ');</script>
+                <script>CreateImage('mor26.jpg','Description of ');</script> 
+                <script>CreateImage('mor27.jpg','Description of ');</script>
+                <script>CreateImage('mor28.jpg','Description of ');</script>
+                <script>CreateImage('mor29.jpg','Description of ');</script>
+                <script>CreateImage('mor30.jpg','Description of ');</script>
+                <script>CreateImage('mor5.jpg','Description of ');</script>
+                 
             </div>
           </div>
         </div>
@@ -728,67 +517,19 @@
           </div>
           <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut31.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut5.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut1.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut4.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut2.jpg"/>
-                    </div>
-                </div>
+                <script>CreateImage('aut31.jpg','Description of ');</script>
+                <script>CreateImage('aut5.jpg','Description of ');</script>
+                <script>CreateImage('aut1.jpg','Description of ');</script>
+                <script>CreateImage('aut4.jpg','Description of ');</script>
+                <script>CreateImage('aut2.jpg','Description of ');</script>
+                <script>CreateImage('aut7.jpg','Description of ');</script>
+                <script>CreateImage('aut8.jpg','Description of ');</script>
+                <script>CreateImage('aut9.jpg','Description of ');</script>
+                <script>CreateImage('aut10.jpg','Description of ');</script>
+                <script>CreateImage('aut11.jpg','Description of ');</script>
+                <script>CreateImage('aut12.jpg','Description of ');</script>
                 
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut7.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut8.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut9.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut10.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut11.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut12.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/aut6.jpg"/>
-                    </div>
-                </div>
+                
             </div>
           </div>
         </div>
@@ -816,59 +557,21 @@
           </div>
           <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/sus1.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/sus3.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/sus5.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/sus2.jpg"/>
-                    </div>
-                </div>
+                <script>CreateImage('sus17.jpg','Description of ');</script>
+                <script>CreateImage('sus1.jpg','Description of ');</script>
+                <script>CreateImage('sus3.jpg','Description of ');</script>
+                <script>CreateImage('sus5.jpg','Description of ');</script>
+                <script>CreateImage('sus2.jpg','Description of ');</script>
+                <script>CreateImage('sus7.jpg','Description of ');</script>
+                <script>CreateImage('sus8.jpg','Description of ');</script>
+                <script>CreateImage('sus9.jpg','Description of ');</script>
+                <script>CreateImage('sus10.jpg','Description of ');</script>
+                <script>CreateImage('sus12.jpg','Description of ');</script>
+                <script>CreateImage('sus14.jpg','Description of ');</script>
+                <script>CreateImage('sus15.jpg','Description of ');</script> 
+                <script>CreateImage('sus16.jpg','Description of ');</script>
+                <script>CreateImage('sus6.jpg','Description of ');</script>
                 
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/sus7.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/sus8.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/sus9.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/sus10.jpg"/>
-                    </div>
-                </div>
-                
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/sus12.jpg"/>
-                    </div>
-                </div>
-                
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/sus6.jpg"/>
-                    </div>
-                </div>
             </div>
           </div>
         </div>
@@ -896,46 +599,13 @@
           </div>
           <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/wal5.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/wal3.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/wal11.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/wal2.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/wal4.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/wal5.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/wal11.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/wal3.jpg"/>
-                    </div>
-                </div>
+                <script>CreateImage('wal12.jpg','Description of ');</script>
+                <script>CreateImage('wal5.jpg','Description of ');</script>
+                <script>CreateImage('wal3.jpg','Description of ');</script>
+                <script>CreateImage('wal11.jpg','Description of ');</script>
+                <script>CreateImage('wal4.jpg','Description of ');</script>
+                
+                
             </div>
           </div>
         </div>
@@ -963,121 +633,30 @@
           </div>
           <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp2.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp3.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp4.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp5.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp6.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp7.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp8.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp9.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp10.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp11.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp12.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp13.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp14.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp15.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp16.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp17.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp18.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp19.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp20.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp21.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp22.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp23.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/exp24.jpg"/>
-                    </div>
-                </div>
+                <script>CreateImage('exp2.jpg','Description of ');</script>
+                <script>CreateImage('exp3.jpg','Description of ');</script>
+                <script>CreateImage('exp4.jpg','Description of ');</script>
+                <script>CreateImage('exp5.jpg','Description of ');</script>
+                <script>CreateImage('exp6.jpg','Description of ');</script>
+                <script>CreateImage('exp7.jpg','Description of ');</script>
+                <script>CreateImage('exp8.jpg','Description of ');</script>
+                <script>CreateImage('exp9.jpg','Description of ');</script>
+                <script>CreateImage('exp10.jpg','Description of ');</script>
+                <script>CreateImage('exp11.jpg','Description of ');</script>
+                <script>CreateImage('exp12.jpg','Description of ');</script>
+                <script>CreateImage('exp13.jpg','Description of ');</script> 
+                <script>CreateImage('exp14.jpg','Description of ');</script>
+                <script>CreateImage('exp15.jpg','Description of ');</script>
+                <script>CreateImage('exp16.jpg','Description of ');</script>
+                <script>CreateImage('exp17.jpg','Description of ');</script>
+                <script>CreateImage('exp18.jpg','Description of ');</script>
+                <script>CreateImage('exp19.jpg','Description of ');</script>
+                <script>CreateImage('exp20.jpg','Description of ');</script>
+                <script>CreateImage('exp21.jpg','Description of ');</script>
+                <script>CreateImage('exp22.jpg','Description of ');</script>
+                <script>CreateImage('exp23.jpg','Description of ');</script>
+                <script>CreateImage('exp24.jpg','Description of ');</script>
+                
                 
             </div>
           </div>
@@ -1106,76 +685,26 @@
           </div>
           <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank2.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank3.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank4.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank5.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank6.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank7.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank8.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank9.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank10.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank11.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank12.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank13.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bank14.jpg"/>
-                    </div>
-                </div>
+               <script>CreateImage('bank2.jpg','Description of ');</script>
+                <script>CreateImage('bank3.jpg','Description of ');</script>
+                <script>CreateImage('bank4.jpg','Description of ');</script>
+                <script>CreateImage('bank.jpg','Description of ');</script>
+                <script>CreateImage('bank5.jpg','Description of ');</script>
+                <script>CreateImage('bank6.jpg','Description of ');</script>
+                <script>CreateImage('bank7.jpg','Description of ');</script>
+                <script>CreateImage('bank8.jpg','Description of ');</script>
+                <script>CreateImage('bank9.jpg','Description of ');</script>
+                <script>CreateImage('bank10.jpg','Description of ');</script>
+                <script>CreateImage('bank11.jpg','Description of ');</script>
+                <script>CreateImage('bank12.jpg','Description of ');</script> 
+                <script>CreateImage('bank13.jpg','Description of ');</script>
+                <script>CreateImage('bank14.jpg','Description of ');</script>
+                <script>CreateImage('bank15.jpg','Description of ');</script>
+                <script>CreateImage('bank16.jpg','Description of ');</script>
+                <script>CreateImage('bank17.jpg','Description of ');</script>
+                <script>CreateImage('bank18.jpg','Description of ');</script>
+                <script>CreateImage('bank19.jpg','Description of ');</script>
+                
             </div>
           </div>
         </div>
@@ -1203,101 +732,25 @@
           </div>
           <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw21.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw2.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw3.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw4.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw7.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw8.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw9.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw10.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw11.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw12.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw13.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw14.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw15.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw16.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw17.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw18.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw19.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw20.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/bnw1.jpg"/>
-                    </div>
-                </div>
+                <script>CreateImage('bnw21.jpg','Description of ');</script>
+                <script>CreateImage('bnw2.jpg','Description of ');</script>
+                <script>CreateImage('bnw3.jpg','Description of ');</script>
+                <script>CreateImage('bnw4.jpg','Description of ');</script>
+                <script>CreateImage('bnw7.jpg','Description of ');</script>
+                <script>CreateImage('bnw8.jpg','Description of ');</script>
+                <script>CreateImage('bnw9.jpg','Description of ');</script>
+                <script>CreateImage('bnw10.jpg','Description of ');</script>
+                <script>CreateImage('bnw11.jpg','Description of ');</script>
+                <script>CreateImage('bnw12.jpg','Description of ');</script>
+                <script>CreateImage('bnw13.jpg','Description of ');</script>
+                <script>CreateImage('bnw14.jpg','Description of ');</script> 
+                <script>CreateImage('bnw15.jpg','Description of ');</script>
+                <script>CreateImage('bnw16.jpg','Description of ');</script>
+                <script>CreateImage('bnw18.jpg','Description of ');</script>
+                <script>CreateImage('bnw19.jpg','Description of ');</script>
+                <script>CreateImage('bnw20.jpg','Description of ');</script>
+                <script>CreateImage('bnw1.jpg','Description of ');</script>
+                
                 
             </div>
           </div>
@@ -1326,126 +779,33 @@
           </div>
           <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai2.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai3.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai4.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai5.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai6.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai7.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai8.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai9.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai10.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai11.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai12.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai13.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai14.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai15.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai16.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai17.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai18.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai19.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai20.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai21.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai22.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai23.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai24.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/thai25.jpg"/>
-                    </div>
-                </div>
+                <script>CreateImage('thai2.jpg','Description of ');</script>
+                <script>CreateImage('thai3.jpg','Description of ');</script>
+                <script>CreateImage('thai4.jpg','Description of ');</script>
+                <script>CreateImage('thai5.jpg','Description of ');</script>
+                <script>CreateImage('thai6.jpg','Description of ');</script>
+                <script>CreateImage('thai7.jpg','Description of ');</script>
+                <script>CreateImage('thai8.jpg','Description of ');</script>
+                <script>CreateImage('thai9.jpg','Description of ');</script>
+                <script>CreateImage('thai10.jpg','Description of ');</script>
+                <script>CreateImage('thai11.jpg','Description of ');</script>
+                <script>CreateImage('thai12.jpg','Description of ');</script>
+                <script>CreateImage('thai13.jpg','Description of ');</script> 
+                <script>CreateImage('thai14.jpg','Description of ');</script>
+                <script>CreateImage('thai15.jpg','Description of ');</script>
+                <script>CreateImage('thai16.jpg','Description of ');</script>
+                <script>CreateImage('thai17.jpg','Description of ');</script>
+                <script>CreateImage('thai18.jpg','Description of ');</script>
+                <script>CreateImage('thai19.jpg','Description of ');</script>
+                <script>CreateImage('thai20.jpg','Description of ');</script>
+                <script>CreateImage('thai21.jpg','Description of ');</script>
+                <script>CreateImage('thai22.jpg','Description of ');</script>
+                <script>CreateImage('thai23.jpg','Description of ');</script>
+                <script>CreateImage('thai24.jpg','Description of ');</script>
+                <script>CreateImage('thai25.jpg','Description of ');</script>
+                <script>CreateImage('thai26.jpg','Description of ');</script>
+                <script>CreateImage('thai26.jpg','Description of ');</script> 
+                
             </div>
           </div>
         </div>
@@ -1473,87 +833,22 @@
           </div>
           <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car4.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car3.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car5.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car2.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car1.jpg"/>
-                    </div>
-                </div>
-                
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car7.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car8.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car9.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car10.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car11.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car12.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car13.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car14.jpg"/>
-                    </div>
-                </div>
-                  <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car15.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car16.jpg"/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="project-image">
-                       <img src="assets/img/car17.jpg"/>
-                    </div>
-                </div>
+                <script>CreateImage('car4.jpg','Description of ');</script>
+                <script>CreateImage('car3.jpg','Description of ');</script>
+                <script>CreateImage('car5.jpg','Description of ');</script>
+                <script>CreateImage('car2.jpg','Description of ');</script>
+                <script>CreateImage('car1.jpg','Description of ');</script>
+                <script>CreateImage('car7.jpg','Description of ');</script>
+                <script>CreateImage('car8.jpg','Description of ');</script>
+                <script>CreateImage('car9.jpg','Description of ');</script>
+                <script>CreateImage('car10.jpg','Description of ');</script>
+                <script>CreateImage('car11.jpg','Description of ');</script>
+                <script>CreateImage('car12.jpg','Description of ');</script>
+                <script>CreateImage('car13.jpg','Description of ');</script> 
+                <script>CreateImage('car14.jpg','Description of ');</script>
+                <script>CreateImage('car15.jpg','Description of ');</script>
+                 <script>CreateImage('car16.jpg','Description of ');</script>
+                <script>CreateImage('car17.jpg','Description of ');</script>
             </div>
           </div>
         </div>
