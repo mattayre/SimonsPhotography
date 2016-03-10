@@ -3845,14 +3845,32 @@ body.noscroll {
 .project img{
   
    -webkit-transition: all 1s;
+   transition: all 1s;
+   -moz-transition: all 1s;
+   -o-transition: all 1s;
+   -ms-transition: all 1s;
   -webkit-transform:scale(1);
   transform:scale(1);
+  -moz-transform:scale(1);
+  -o-transform:scale(1);
+  -ms-transform:scale(1);
 }
 .project:hover img {
    -webkit-filter:brightness(50%);
+   -moz-filter:brightness(50%);
+   -o-filter:brightness(50%);
+   -ms-filter:brightness(50%);
+   filter:brightness(50%);
   -webkit-transition: all 4s;
+  transition: all 4s;
+   -moz-transition: all 4s;
+   -o-transition: all 4s;
+   -ms-transition: all 4s;
   -webkit-transform:scale(1.5);
   transform:scale(1.5);
+  -moz-transform:scale(1.5);
+  -o-transform:scale(1.5);
+  -ms-transform:scale(1.5);
 }
 .section-with-hover .project .over-area {
   opacity:1;
