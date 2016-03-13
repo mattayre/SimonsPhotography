@@ -11,12 +11,14 @@ img.lightboximageclass {
     }
 
 p.lighboxcaptionclass {
-    padding:20px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
     opacity:1;
-    background-color:#FFFEE9;
+    background-color:black;
     font-family:"arial";
-    color:black;
-    display:none;
+    color:white;
+    display:block;
+    margin:0px;
+    border:0px;
     }
 
 #lightboxwindow { 
