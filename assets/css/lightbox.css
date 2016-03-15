@@ -1,7 +1,9 @@
 div.lightboxdivclass{
     display:inline-block;
     background-color:black;
-    padding:5px;
+    padding:0px;
+    border:0px;
+    margin: 0px;
     }
 
 img.lightboximageclass {
@@ -12,8 +14,8 @@ img.lightboximageclass {
 
 p.lighboxcaptionclass {
     padding:0px 0px 0px 0px;
-    opacity:1;
-    background-color:black;
+    opacity:.5;
+    background-color:transparent;
     font-family:"arial";
     color:white;
     display:block;
