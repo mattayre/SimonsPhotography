@@ -19,18 +19,27 @@
   <link href="assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
 
   <link href="assets/css/lightbox.css" rel="stylesheet" />
+  <script src="assets/js/project.js"></script>
   <script src="assets/js/lightbox.js"></script>
 </head>
 
 <body id="skrollr-body">
+
+<!-- Remove the "Just a sec..." loading message now that the page loads very quickly -->
+<!--
   <div class="loading ">
   <div class="loading-container">
     <p>Just a sec...</p>
     <img class="loader" src="assets/img/rubik.svg"/>
   </div>
 </div>
+-->
+  <!-- project window -->
+  <div class="project-content" id="project" onclick="CloseProject();">
+    <!-- This DIV is deliberately empty; the contents of the DIV are built via the JavaScript function OpenProject in file project.js -->
+  </div>
 
- <!-- lightbox window -->
+  <!-- lightbox window -->
   <div id="lightboxwindow" onclick="CloseLightbox();">
     <div class="lightboxdivclass">
       <br>
@@ -176,7 +185,7 @@
             <div class="col-md-6">
                 <div class="project ">
                       <img src="assets/img/imglg/mor4.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
-                       <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_2">
+                       <a class="over-area " href="javascript:void(0)" onClick="OpenProject(this)" data-target="Morocco">
                            <div class="content">
                               <h4 >MOROCCO</h4>
                               <p></p>
@@ -188,7 +197,7 @@
             <div class="col-md-6">
                 <div class="project ">
                     <img src="assets/img/imglg/car4.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)">
-                    <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_6">
+                    <a class="over-area " href="javascript:void(0)" onClick="OpenProject(this)" data-target="Cardiff">
                          <div class="content">
                             <h4 >CARDIFF</h4>
                             <p></p>
@@ -200,7 +209,7 @@
             <div class="col-md-6">
                 <div class="project ">
                       <img src="assets/img/imglg/exp2.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
-                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_7">
+                      <a class="over-area " href="javascript:void(0)" onClick="OpenProject(this)" data-target="Experimental">
                            <div class="content">
                               <h4>EXPERIMENTAL<br></h4>
                               <p></p>
@@ -212,7 +221,7 @@
             <div class="col-md-6">
                 <div class="project ">
                       <img src="assets/img/imglg/thai2.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
-                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_8">
+                      <a class="over-area " href="javascript:void(0)" onClick="OpenProject(this)" data-target="Thailand-Laos">
                            <div class="content">
                               <h4>THAILAND<br>& LAOS</h4>
                               
@@ -224,7 +233,7 @@
             <div class="col-md-6">
                 <div class="project ">
                       <img src="assets/img/imglg/bnw2.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
-                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_9">
+                      <a class="over-area " href="javascript:void(0)" onClick="OpenProject(this)" data-target="Black-N-White">
                            <div class="content">
                               <h4>BLACK N WHITE<br></h4>
                               <p></p>
@@ -237,7 +246,7 @@
             <div class="col-md-6">
                 <div class="project ">
                       <img src="assets/img/imglg/cam3.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
-                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_1">
+                      <a class="over-area " href="javascript:void(0)" onClick="OpenProject(this)" data-target="Cambodia">
                            <div class="content">
                               <h4>CAMBODIA<br></h4>
                               <p></p>
@@ -250,7 +259,7 @@
             <div class="col-md-6">
                 <div class="project ">
                     <img src="assets/img/imglg/aut3.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)">
-                    <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_3">
+                    <a class="over-area " href="javascript:void(0)" onClick="OpenProject(this)" data-target="Autumn">
                          <div class="content">
                             <h4>AUTUMN</h4>
                             <p></p>
@@ -262,7 +271,7 @@
             <div class="col-md-6">
                 <div class="project ">
                       <img src="assets/img/imglg/bank.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
-                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_10">
+                      <a class="over-area " href="javascript:void(0)" onClick="OpenProject(this)" data-target="Bangkok">
                            <div class="content">
                               <h4>BANGKOK<br></h4>
                               <p></p>
@@ -274,7 +283,7 @@
             <div class="col-md-6">
                 <div class="project ">
                       <img src="assets/img/imglg/wal11.jpg"style="-webkit-filter:brightness(80%);filter:brightness(80%);-moz-filter:brightness(80%);-o-filter:brightness(80%);-ms-filter:brightness(80%)"/>
-                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_5">
+                      <a class="over-area " href="javascript:void(0)" onClick="OpenProject(this)" data-target="Wales">
                            <div class="content">
                               <h4>WALES</h4>
                               <p></p>
@@ -286,7 +295,7 @@
             <div class="col-md-6">
                 <div class="project ">
                     <img src="assets/img/imglg/sus3.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)">
-                    <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_4">
+                    <a class="over-area " href="javascript:void(0)" onClick="OpenProject(this)" data-target="Sussex">
                          <div class="content">
                             <h4 >SUSSEX</h4>
                             <p></p>
@@ -392,516 +401,7 @@
       </div>
   </footer>
   </div> <!-- end wrapper -->
-<!-- insert modal -->
-<div class="project-content" id="project_1">
-  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
-  <div>
-    <div class="project-details">
-      <div class="container">
-        <div class="project-title">
-            <h5>Cambodia<span>.</span></h5>
-            <h2>2013</h2>
-            <div class="separator-container">
-              <div class="separator line-separator">∎</div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="project-text">
-              <p>In 2013 I travelled to Cambodia. Cambodia's ancient name is "Kambuja". In 802 AD, Jayavarman II declared himself "King" and marked the beginning of the Khmer Empire which flourished for over 600 years, allowing successive kings to dominate much of Southeast Asia and accumulate immense power and wealth. The Indianized kingdom built monumental temples including Angkor Wat, now a World Heritage Site, and facilitated the spread of first Hinduism, then Buddhism to much of Southeast Asia. After the fall of Angkor to Ayutthaya in the 15th century, Cambodia was then ruled as a vassal between its neighbours.</p>
-              
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-               <script>CreateImage('cam1.jpg','Description of ');</script>
-                <script>CreateImage('cam2.jpg','Description of ');</script>
-                <script>CreateImage('cam3.jpg','Description of ');</script>
-                <script>CreateImage('cam4.jpg','Description of ');</script>
-                <script>CreateImage('cam5.jpg','Description of ');</script>
-                <script>CreateImage('cam6.jpg','Description of ');</script>
-                <script>CreateImage('cam7.jpg','Description of ');</script>
-                <script>CreateImage('cam8.jpg','Description of ');</script>
-                <script>CreateImage('cam9.jpg','Description of ');</script>
-                <script>CreateImage('cam10.jpg','Description of ');</script>
-                <script>CreateImage('cam11.jpg','Description of ');</script>
-                <script>CreateImage('cam12.jpg','Description of ');</script>
-                <script>CreateImage('cam13.jpg','Description of ');</script>
-                <script>CreateImage('cam14.jpg','Description of ');</script>
-                <script>CreateImage('cam15.jpg','Description of ');</script>
-                <script>CreateImage('cam16.jpg','Description of ');</script> 
-                <script>CreateImage('cam17.jpg','Description of ');</script>
-                <script>CreateImage('cam18.jpg','Description of ');</script>
-                <script>CreateImage('cam19.jpg','Description of ');</script>
-                <script>CreateImage('cam20.jpg','Description of ');</script>
-                <script>CreateImage('cam32.jpg','Description of ');</script>
-                <script>CreateImage('cam33.jpg','Description of ');</script>
-                <script>CreateImage('cam34.jpg','Description of ');</script>
-                <script>CreateImage('cam35.jpg','Description of ');</script>
-                <script>CreateImage('cam36.jpg','Description of ');</script>
-                <script>CreateImage('cam37.jpg','Description of ');</script>
-                <script>CreateImage('cam38.jpg','Description of ');</script>
-                <script>CreateImage('cam39.jpg','Description of ');</script>
-                
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="project-content" id="project_2">
-  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
-  <div>
-    <div class="project-details">
-      <div class="container">
-        <div class="project-title">
-            <h5>Morrocco<span>.</span></h5>
-            <h2>2014</h2>
-            <div class="separator-container">
-              <div class="separator line-separator">∎</div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="project-text">
-              <p>The Kingdom of Morocco is the most westerly of the North African countries known as the Maghreb - the "Arab West". It has Atlantic and Mediterranean coastlines, a rugged mountain interior and a history of independence not shared by its neighbours.</p>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-                <script>CreateImage('mor4.jpg','Description of ');</script>
-                <script>CreateImage('mor3.jpg','Description of ');</script>
-                <script>CreateImage('mor2.jpg','Description of ');</script>
-                <script>CreateImage('mor1.jpg','Description of ');</script>
-                <script>CreateImage('mor6.jpg','Description of ');</script>
-                <script>CreateImage('mor7.jpg','Description of ');</script>
-                <script>CreateImage('mor8.jpg','Description of ');</script>
-                <script>CreateImage('mor9.jpg','Description of ');</script>
-                <script>CreateImage('mor10.jpg','Description of ');</script>
-                <script>CreateImage('mor11.jpg','Description of ');</script>
-                <script>CreateImage('mor12.jpg','Description of ');</script>
-                <script>CreateImage('mor13.jpg','Description of ');</script>
-                <script>CreateImage('mor14.jpg','Description of ');</script>
-                <script>CreateImage('mor15.jpg','Description of ');</script>
-                <script>CreateImage('mor16.jpg','Description of ');</script>
-                <script>CreateImage('mor17.jpg','Description of ');</script> 
-                <script>CreateImage('mor18.jpg','Description of ');</script>
-                <script>CreateImage('mor19.jpg','Description of ');</script>
-                <script>CreateImage('mor20.jpg','Description of ');</script>
-                <script>CreateImage('mor21.jpg','Description of ');</script>
-                <script>CreateImage('mor22.jpg','Description of ');</script>
-                <script>CreateImage('mor23.jpg','Description of ');</script>
-                <script>CreateImage('mor24.jpg','Description of ');</script>
-                <script>CreateImage('mor25.jpg','Description of ');</script>
-                <script>CreateImage('mor26.jpg','Description of ');</script> 
-                <script>CreateImage('mor27.jpg','Description of ');</script>
-                <script>CreateImage('mor28.jpg','Description of ');</script>
-                <script>CreateImage('mor29.jpg','Description of ');</script>
-                <script>CreateImage('mor30.jpg','Description of ');</script>
-                <script>CreateImage('mor5.jpg','Description of ');</script>
-                <script>CreateImage('mor31.jpg','Description of ');</script>
-                <script>CreateImage('mor32.jpg','Description of ');</script>
-                <script>CreateImage('mor33.jpg','Description of ');</script>
-                <script>CreateImage('mor34.jpg','Description of ');</script>
-                
-                 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="project-content" style="background-color:black" id="project_3">
-  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
-  <div>
-    <div class="project-details" style="background-color:black">
-      <div class="container" >
-        <div class="project-title">
-            <h5>Autumn Colours<span>.</span></h5>
-            <h2>2014</h2>
-            <div class="separator-container">
-              <div class="separator line-separator">∎</div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="project-text">
-              <p>Formerly green leaves turn to brilliant shades of yellow, orange, and red. These color changes are the result of transformations in leaf pigments. The green pigment in leaves is chlorophyll. Chlorophyll absorbs red and blue light from the sunlight that falls on leaves.</p>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-                <script>CreateImage('aut31.jpg','Description of ');</script>
-                <script>CreateImage('aut5.jpg','Description of ');</script>
-                <script>CreateImage('aut1.jpg','Description of ');</script>
-                <script>CreateImage('aut4.jpg','Description of ');</script>
-                <script>CreateImage('aut2.jpg','Description of ');</script>
-                <script>CreateImage('aut7.jpg','Description of ');</script>
-                <script>CreateImage('aut8.jpg','Description of ');</script>
-                <script>CreateImage('aut9.jpg','Description of ');</script>
-                <script>CreateImage('aut10.jpg','Description of ');</script>
-                <script>CreateImage('aut11.jpg','Description of ');</script>
-                <script>CreateImage('aut12.jpg','Description of ');</script>
-                <script>CreateImage('aut32.jpg','Description of ');</script>
-                <script>CreateImage('aut33.jpg','Description of ');</script>
-                <script>CreateImage('aut34.jpg','Description of ');</script>
-                
-                
-                
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="project-content" id="project_4">
-  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
-  <div>
-    <div class="project-details">
-      <div class="container">
-        <div class="project-title">
-            <h5>West Sussex<span>.</span></h5>
-            <h2>2012</h2>
-            <div class="separator-container">
-              <div class="separator line-separator">∎</div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="project-text">
-              <p>Sussex has three main geographic sub-regions, each oriented approximately east to west. In the south-west of the county lies the fertile and densely populated coastal plain. North of this lie the rolling chalk hills of the South Downs, beyond which lies the well-wooded Sussex Weald.</p>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-                <script>CreateImage('sus17.jpg','Description of ');</script>
-                <script>CreateImage('sus1.jpg','Description of ');</script>
-                <script>CreateImage('sus3.jpg','Description of ');</script>
-                <script>CreateImage('sus5.jpg','Description of ');</script>
-                <script>CreateImage('sus2.jpg','Description of ');</script>
-                <script>CreateImage('sus7.jpg','Description of ');</script>
-                <script>CreateImage('sus8.jpg','Description of ');</script>
-                <script>CreateImage('sus9.jpg','Description of ');</script>
-                <script>CreateImage('sus10.jpg','Description of ');</script>
-                <script>CreateImage('sus12.jpg','Description of ');</script>
-                <script>CreateImage('sus14.jpg','Description of ');</script>
-                <script>CreateImage('sus15.jpg','Description of ');</script> 
-                <script>CreateImage('sus16.jpg','Description of ');</script>
-                <script>CreateImage('sus18.jpg','Description of ');</script>
-                
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="project-content" id="project_5">
-  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
-  <div>
-    <div class="project-details">
-      <div class="container">
-        <div class="project-title">
-            <h5>Wales<span>.</span></h5>
-            <h2>2012</h2>
-            <div class="separator-container">
-              <div class="separator line-separator">∎</div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="project-text">
-              <p>Wales is in the south-western part of the United Kingdom. From the east land border with England, by the Bristol Channel. Most  of Wales is mountainous with its highest peak - Snowdon, 1,085 meters above sea level</p>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-                <script>CreateImage('wal12.jpg','Description of ');</script>
-                <script>CreateImage('wal5.jpg','Description of ');</script>
-                <script>CreateImage('wal3.jpg','Description of ');</script>
-                <script>CreateImage('wal11.jpg','Description of ');</script>
-                <script>CreateImage('wal4.jpg','Description of ');</script>
-                <script>CreateImage('wal13.jpg','Description of ');</script>
-                <script>CreateImage('wal14.jpg','Description of ');</script>
-                <script>CreateImage('wal15.jpg','Description of ');</script>
-                <script>CreateImage('wal16.jpg','Description of ');</script>
-                <script>CreateImage('wal17.jpg','Description of ');</script>
-                
-                
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="project-content" id="project_7">
-  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
-  <div>
-    <div class="project-details">
-      <div class="container">
-        <div class="project-title">
-            <h5>Experimental<span>.</span></h5>
-            <h2></h2>
-            <div class="separator-container">
-              <div class="separator line-separator">∎</div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="project-text">
-              <p>A collection of my various experimental and abstract pictures</p>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-                <script>CreateImage('exp2.jpg','Description of ');</script>
-                <script>CreateImage('exp3.jpg','Description of ');</script>
-                <script>CreateImage('exp4.jpg','Description of ');</script>
-                <script>CreateImage('exp5.jpg','Description of ');</script>
-                <script>CreateImage('exp6.jpg','Description of ');</script>
-                <script>CreateImage('exp7.jpg','Description of ');</script>
-                <script>CreateImage('exp8.jpg','Description of ');</script>
-                <script>CreateImage('exp9.jpg','Description of ');</script>
-                <script>CreateImage('exp10.jpg','Description of ');</script>
-                <script>CreateImage('exp11.jpg','Description of ');</script>
-                <script>CreateImage('exp12.jpg','Description of ');</script>
-                <script>CreateImage('exp13.jpg','Description of ');</script> 
-                <script>CreateImage('exp14.jpg','Description of ');</script>
-                <script>CreateImage('exp15.jpg','Description of ');</script>
-                <script>CreateImage('exp16.jpg','Description of ');</script>
-                <script>CreateImage('exp17.jpg','Description of ');</script>
-                <script>CreateImage('exp18.jpg','Description of ');</script>
-                <script>CreateImage('exp19.jpg','Description of ');</script>
-                <script>CreateImage('exp20.jpg','Description of ');</script>
-                <script>CreateImage('exp21.jpg','Description of ');</script>
-                <script>CreateImage('exp22.jpg','Description of ');</script>
-                <script>CreateImage('exp23.jpg','Description of ');</script>
-                <script>CreateImage('exp24.jpg','Description of ');</script>
-                <script>CreateImage('exp25.jpg','Description of ');</script>
-                <script>CreateImage('exp26.jpg','Description of ');</script>
-                <script>CreateImage('exp27.jpg','Description of ');</script>
-                <script>CreateImage('exp28.jpg','Description of ');</script>
-                
-                
-                
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="project-content" id="project_10">
-  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
-  <div>
-    <div class="project-details">
-      <div class="container">
-        <div class="project-title">
-            <h5>Bangkok<span>.</span></h5>
-            <h2>2011</h2>
-            <div class="separator-container">
-              <div class="separator line-separator">∎</div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="project-text">
-              <p>Bangkok traces its roots to a small trading post during the Ayutthaya Kingdom in the 15th century, which eventually grew in size and became the site of two capital cities: Thonburi in 1768 and Rattanakosin in 1782. Bangkok was at the heart of Siam's (as Thailand used to be known) modernization, during the later 19th century, as the country faced pressures from the West. The city was the centre of Thailand's political struggles, throughout the 20th century, as the country abolished absolute monarchy, adopted constitutional rule and underwent numerous coups and several uprisings. The city grew rapidly during the 1960s through the 1980s and now exerts a significant impact among Thailand's politics, economy, education, media and modern society.</p>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-               <script>CreateImage('bank2.jpg','Description of ');</script>
-                <script>CreateImage('bank3.jpg','Description of ');</script>
-                <script>CreateImage('bank4.jpg','Description of ');</script>
-                <script>CreateImage('bank.jpg','Description of ');</script>
-                <script>CreateImage('bank5.jpg','Description of ');</script>
-                <script>CreateImage('bank6.jpg','Description of ');</script>
-                <script>CreateImage('bank7.jpg','Description of ');</script>
-                <script>CreateImage('bank8.jpg','Description of ');</script>
-                <script>CreateImage('bank9.jpg','Description of ');</script>
-                <script>CreateImage('bank10.jpg','Description of ');</script>
-                <script>CreateImage('bank11.jpg','Description of ');</script>
-                <script>CreateImage('bank12.jpg','Description of ');</script> 
-                <script>CreateImage('bank13.jpg','Description of ');</script>
-                <script>CreateImage('bank14.jpg','Description of ');</script>
-                <script>CreateImage('bank15.jpg','Description of ');</script>
-                <script>CreateImage('bank16.jpg','Description of ');</script>
-                <script>CreateImage('bank17.jpg','Description of ');</script>
-                <script>CreateImage('bank18.jpg','Description of ');</script>
-                <script>CreateImage('bank19.jpg','Description of ');</script>
-                <script>CreateImage('bank20.jpg','Description of ');</script>
-                <script>CreateImage('bank21.jpg','Description of ');</script> 
-                <script>CreateImage('bank22.jpg','Description of ');</script>
-                <script>CreateImage('bank23.jpg','Description of ');</script>
-                <script>CreateImage('bank24.jpg','Description of ');</script>
-                
-                
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="project-content" id="project_9">
-  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
-  <div>
-    <div class="project-details">
-      <div class="container">
-        <div class="project-title">
-            <h5>Black N White<span>.</span></h5>
-            <h2></h2>
-            <div class="separator-container">
-              <div class="separator line-separator">∎</div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="project-text">
-              <p>A collection of some of my black and white photography</p>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-                <script>CreateImage('bnw21.jpg','Description of ');</script>
-                <script>CreateImage('bnw2.jpg','Description of ');</script>
-                <script>CreateImage('bnw3.jpg','Description of ');</script>
-                <script>CreateImage('bnw4.jpg','Description of ');</script>
-                <script>CreateImage('bnw7.jpg','Description of ');</script>
-                <script>CreateImage('bnw8.jpg','Description of ');</script>
-                <script>CreateImage('bnw9.jpg','Description of ');</script>
-                <script>CreateImage('bnw10.jpg','Description of ');</script>
-                <script>CreateImage('bnw11.jpg','Description of ');</script>
-                <script>CreateImage('bnw12.jpg','Description of ');</script>
-                <script>CreateImage('bnw13.jpg','Description of ');</script>
-                <script>CreateImage('bnw14.jpg','Description of ');</script> 
-                <script>CreateImage('bnw15.jpg','Description of ');</script>
-                <script>CreateImage('bnw16.jpg','Description of ');</script>
-                <script>CreateImage('bnw18.jpg','Description of ');</script>
-                <script>CreateImage('bnw19.jpg','Description of ');</script>
-                <script>CreateImage('bnw20.jpg','Description of ');</script>
-                <script>CreateImage('bnw1.jpg','Description of ');</script>
-                <script>CreateImage('bnw22.jpg','Description of ');</script> 
-                <script>CreateImage('bnw23.jpg','Description of ');</script>
-                <script>CreateImage('bnw24.jpg','Description of ');</script>
-                
-                
-                
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="project-content" id="project_8">
-  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
-  <div>
-    <div class="project-details">
-      <div class="container">
-        <div class="project-title">
-            <h5>Thailand & Laos<span>.</span></h5>
-            <h2>2011</h2>
-            <div class="separator-container">
-              <div class="separator line-separator">∎</div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="project-text">
-              <p>Thailand and the laidback river lifestyle of Laos is a voyage of discovery, taking in the bright lights and tourist trails in Thailand, the age old charms of Luang Prabang in Laos and the temples of Vientiane I traveled down the mighty Mekong River and become immersed in the tranquillity of remote villages and friendly locals along the way.</p>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-                <script>CreateImage('thai2.jpg','Description of ');</script>
-                <script>CreateImage('thai3.jpg','Description of ');</script>
-                <script>CreateImage('thai4.jpg','Description of ');</script>
-                <script>CreateImage('thai5.jpg','Description of ');</script>
-                <script>CreateImage('thai6.jpg','Description of ');</script>
-                <script>CreateImage('thai7.jpg','Description of ');</script>
-            
-                <script>CreateImage('thai9.jpg','Description of ');</script>
-                <script>CreateImage('thai10.jpg','Description of ');</script>
-                <script>CreateImage('thai11.jpg','Description of ');</script>
-                <script>CreateImage('thai12.jpg','Description of ');</script>
-                
-                
-                <script>CreateImage('thai15.jpg','Description of ');</script>
-                <script>CreateImage('thai16.jpg','Description of ');</script>
-                <script>CreateImage('thai17.jpg','Description of ');</script>
-                <script>CreateImage('thai19.jpg','Description of ');</script>
-                <script>CreateImage('thai20.jpg','Description of ');</script>
-                <script>CreateImage('thai21.jpg','Description of ');</script>
-                <script>CreateImage('thai22.jpg','Description of ');</script>
-                <script>CreateImage('thai23.jpg','Description of ');</script>
-                <script>CreateImage('thai24.jpg','Description of ');</script>
-                <script>CreateImage('thai25.jpg','Description of ');</script>
-                <script>CreateImage('thai26.jpg','Description of ');</script>
-                <script>CreateImage('thai27.jpg','Description of ');</script>
-                <script>CreateImage('thai28.jpg','Description of ');</script>
-                <script>CreateImage('thai29.jpg','Description of ');</script>
-                <script>CreateImage('thai30.jpg','Description of ');</script>
-                <script>CreateImage('thai31.jpg','Description of ');</script>
-                <script>CreateImage('thai32.jpg','Description of ');</script>
-                
-                
-                
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="project-content" id="project_6">
-  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
-  <div>
-    <div class="project-details">
-      <div class="container">
-        <div class="project-title">
-            <h5>Cardiff<span>.</span></h5>
-            <h2>2014</h2>
-            <div class="separator-container">
-              <div class="separator line-separator">∎</div>
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="project-text">
-              <p>Rugged beaches have developed in the mainly low lying and reclaimed marshland on top of a Triassic landscape, on the coastal region of southern Wales.</p>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-                <script>CreateImage('car4.jpg','Description of ');</script>
-                <script>CreateImage('car3.jpg','Description of ');</script>
-                <script>CreateImage('car5.jpg','Description of ');</script>
-                <script>CreateImage('car2.jpg','Description of ');</script>
-                <script>CreateImage('car1.jpg','Description of ');</script>
-                <script>CreateImage('car7.jpg','Description of ');</script>
-                <script>CreateImage('car8.jpg','Description of ');</script>
-                <script>CreateImage('car9.jpg','Description of ');</script>
-                <script>CreateImage('car10.jpg','Description of ');</script>
-                <script>CreateImage('car11.jpg','Description of ');</script>
-                <script>CreateImage('car12.jpg','Description of ');</script>
-                <script>CreateImage('car13.jpg','Description of ');</script> 
-                <script>CreateImage('car14.jpg','Description of ');</script>
-                <script>CreateImage('car15.jpg','Description of ');</script>
-                 <script>CreateImage('car16.jpg','Description of ');</script>
-                <script>CreateImage('car17.jpg','Description of ');</script>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
 </body>
    <!--   core js files    -->
    <script src="assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
