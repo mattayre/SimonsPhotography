@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Simon Dunder Skorupa Photography</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    
+
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/css/rubick.css" rel="stylesheet"/>
+
+  <!--     Fonts and icons     -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+  <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+  <link href="assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
+
+  <link href="assets/css/lightbox.css" rel="stylesheet" />
+  <script src="assets/js/lightbox.js"></script>
+</head>
+
+<body id="skrollr-body">
+  <div class="loading ">
+  <div class="loading-container">
+    <p>Just a sec...</p>
+    <img class="loader" src="assets/img/rubik.svg"/>
+  </div>
+</div>
+
+ <!-- lightbox window -->
+  <div id="lightboxwindow" onclick="CloseLightbox();">
+    <div class="lightboxdivclass">
+      <br>
+      <p id="lighboxcaption" class="lighboxcaptionclass"><br></p>
+      <img id="lightboximage" class="lightboximageclass" onload="LoadLightbox()" alt="" src="<dynamic>">
+      
+    </div>
+  </div>
+
+  <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
+  <nav class="navbar navbar-default navbar-burger navbar-transparent navbar-fixed-top" style="height:100px;opacity:0.7"role="navigation">
+      
+    <div class="container">
+      <div class="navbar-header">
+        <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar bar1"></span>
+            <span class="icon-bar bar2"></span>
+            <span class="icon-bar bar3"></span>
+        </button>
+        <a href="" class="navbar-brand">
+           Simon Dunder<br>Skorupa
+        </a>
+      </div>
+      <div class="navbar-scroll-to collapse navbar-collapse" >
+        <ul class="nav navbar-nav navbar-right">
+              <li>
+                  <a href="" data-scroll="true" data-id="#whoWeAre" class="active"> 
+                      About Me
+                  </a>
+              </li>
+              <li>
+                  <a href="" data-scroll="true" data-id="#projects"> 
+                      Cambodia
+                  </a>
+              </li>
+              <li>
+                  <a href="" data-scroll="true" data-id="#clients"> 
+                      Black & White
+                  </a>
+              </li>
+              <li>
+                  <a href="" data-scroll="true" data-id="#team"> 
+                      Autumn
+                  </a>
+              </li>
+              <li>
+                  <a href="" data-scroll="true" data-id="#numbers"> 
+                      Experimental
+                  </a>
+              </li>
+              <li>
+                  <a href="" data-scroll="true" data-id="#contact"> 
+                      Thailand and Laos
+                  </a>
+              </li>
+              <li>
+                  <a href="" data-scroll="true" data-id="#contact"> 
+                      Morroco
+                  </a>
+              </li>
+         </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+
+    
+  <div class="wrapper">
+    <div class="section section-header">
+      <div class="parallax">
+          <img style="-webkit-filter:brightness(65%);filter:brightness(65%);-moz-filter:brightness(65%);-o-filter:brightness(65%);-ms-filter:brightness(65%)" src="assets/img/header3.jpg"/>
+
+          <div class="container"> 
+            <div class="content content-with-opacity">
+                <p><span></span>Simon Dunder Skorupa</p>
+                <h1 class="responsive-small">Photographer</h1>
+                <div class="separator-container">
+                    <div class="separator line-separator">⌘</div>
+                </div>            
+                <h5>Photography Collection</h5>
+            </div>   
+        </div>
+      </div>
+      <a href="" data-scroll="true" data-id="#whoWeAre" class="scroll-arrow hidden-xs hidden-sm">
+            <i class="fa fa-angle-down"></i>
+        </a>
+    </div>
+    <div class="section section-we-are-1" id="whoWeAre">
+      <div class="text-area">
+        <div class="container">
+          <div class="row">
+            <div  class="title add-animation">
+              <h2>Simon Dunder Skorupa<br></h2>
+              <div class="separator-container">
+                <div class="separator line-separator">⌘</div>
+              </div>
+
+              <p>I designed this site so you can get to know me and my career as a professional photographer, my projects and my personal photography...it is a work in progress. So please sit back and enjoy!.</p>        
+            </div>
+          </div>          
+        </div>
+      </div>  
+      <div id="carousel">
+        <div id="carousel-example-generic" class="carousel slide" data-interval="false">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner ">
+            <div class="item ">
+              <img class="full-image" src="assets/img/slider2.jpg" style="-webkit-filter:brightness(70%)"  alt="Awesome Image"/>
+            </div>
+            <div class="item ">
+              <img class="full-image" style="-webkit-filter:brightness(70%);filter:brightness(70%);-moz-filter:brightness(70%);-o-filter:brightness(70%);-ms-filter:brightness(70%)" src="assets/img/slider4.jpg" alt="Awesome Image"/>
+            </div>
+
+            <div class="item">
+              <img class="full-image" style="-webkit-filter:brightness(70%);filter:brightness(70%);-moz-filter:brightness(70%);-o-filter:brightness(70%);-ms-filter:brightness(70%)" src="assets/img/slider1.jpg" alt="Awesome Image">
+            </div>
+
+            <div class="item active">
+              <img class="full-image" style="-webkit-filter:brightness(70%);filter:brightness(70%);-moz-filter:brightness(70%);-o-filter:brightness(70%);-ms-filter:brightness(70%)"  src="assets/img/slider3.jpg"  alt="Awesome Image">
+            </div>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><span class="fa fa-angle-left hidden-md hidden-lg"></span></a>      
+          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><span class="fa fa-angle-right hidden-ms hidden-lg"></span></a>        
+        </div>
+      </div>  
+    </div>
+
+        <div class="section section-we-made-1 section-with-hover" id="projects">
+         <div class="text-area">
+            <div class="title ">
+                <h5 class="text-gray"></h5>
+                <h2>Photography</h2>
+                <div class="separator-container">
+                    <div class="separator line-separator">⌘</div>
+                </div>
+            </div>
+         </div>
+
+        <div class="row">
+            
+            
+            <div class="col-md-6">
+                <div class="project ">
+                      <img src="assets/img/imglg/mor4.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
+                       <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_2">
+                           <div class="content">
+                              <h4 >MOROCCO</h4>
+                              <p></p>
+                              <p></p>
+                          </div>
+                      </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project ">
+                    <img src="assets/img/imglg/car4.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)">
+                    <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_6">
+                         <div class="content">
+                            <h4 >CARDIFF</h4>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project ">
+                      <img src="assets/img/imglg/exp2.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
+                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_7">
+                           <div class="content">
+                              <h4>EXPERIMENTAL<br></h4>
+                              <p></p>
+                              <p></p>
+                          </div>
+                      </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project ">
+                      <img src="assets/img/imglg/thai2.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
+                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_8">
+                           <div class="content">
+                              <h4>THAILAND<br>& LAOS</h4>
+                              
+                              <p></p>
+                          </div>
+                      </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project ">
+                      <img src="assets/img/imglg/bnw2.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
+                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_9">
+                           <div class="content">
+                              <h4>BLACK N WHITE<br></h4>
+                              <p></p>
+                              <p></p>
+                          </div>
+                      </a>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="project ">
+                      <img src="assets/img/imglg/cam3.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
+                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_1">
+                           <div class="content">
+                              <h4>CAMBODIA<br></h4>
+                              <p></p>
+                              <p></p>
+                          </div>
+                      </a>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="project ">
+                    <img src="assets/img/imglg/aut3.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)">
+                    <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_3">
+                         <div class="content">
+                            <h4>AUTUMN</h4>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </a>
+                 </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project ">
+                      <img src="assets/img/imglg/bank.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)"/>
+                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_10">
+                           <div class="content">
+                              <h4>BANGKOK<br></h4>
+                              <p></p>
+                              <p></p>
+                          </div>
+                      </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project ">
+                      <img src="assets/img/imglg/wal11.jpg"style="-webkit-filter:brightness(80%);filter:brightness(80%);-moz-filter:brightness(80%);-o-filter:brightness(80%);-ms-filter:brightness(80%)"/>
+                      <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_5">
+                           <div class="content">
+                              <h4>WALES</h4>
+                              <p></p>
+                              <p></p>
+                          </div>
+                      </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project ">
+                    <img src="assets/img/imglg/sus3.jpg"style="-webkit-filter:brightness(90%);filter:brightness(90%);-moz-filter:brightness(90%);-o-filter:brightness(90%);-ms-filter:brightness(90%)">
+                    <a class="over-area " href="javascript:void(0)" onClick="rubik.showModal(this)" data-target="project_4">
+                         <div class="content">
+                            <h4 >SUSSEX</h4>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </a>
+                 </div>
+            </div>
+            
+          </div>
+       </div>
+
+        
+                        
+
+      <div class="section section-team-2" id="team">
+        <div class="container">        
+          <div class="text-area">
+              <div class="title add-animation">
+                  <h2>Get in Touch</h2>
+                  <div class="separator-container">
+                    <div class="separator line-separator">⌘</div>
+                  </div>
+                  <p>Would you like to talk about a project? Like my work? Just send me your message and I will get back to you</p>
+              </div>
+          </div>
+          <div class="team">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="row">
+                        
+                        
+                    </div>
+                </div>
+            </div>
+          </div> <!-- end team -->
+      </div>
+    </div> 
+    
+    
+    
+    
+    
+    
+
+   <div class="section section-contact-2" id="contact">
+        <div class="container">   
+          
+          <div class="contact-form">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="form-group add-animation animation-1">
+                        <label>Your Full Name</label>
+                        <input type="text" value="" placeholder="name" class="form-control">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="form-group add-animation animation-2">
+                          <label>Your Email</label>
+                          <input type="text" value="" placeholder="@gmail.com" class="form-control">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="form-group add-animation animation-3">
+                          <label>Subject</label>
+                          <input type="text" value="" placeholder="say hi" class="form-control">
+                      </div>
+                  </div>
+                  <div class="col-md-12">
+                      <div class="form-group add-animation animation-1">
+                          <textarea class="form-control" placeholder="write message here" rows="8"></textarea>
+                      </div>
+                  <div>
+                  <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5">
+                       <button  class="btn btn-lg btn-black btn-contact">
+                          SEND <i class="fa fa-paper-plane"></i>
+                       </button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+     <footer class="footer footer-color-black">
+      <div class="container">
+          <nav class="pull-left">
+              
+          </nav>
+          <div class="social-area pull-right">                
+              <a class="btn btn-social btn-facebook btn-simple">
+                  <i class="fa fa-facebook-square"></i>
+              </a>
+              <a class="btn btn-social btn-twitter btn-simple">
+                  <i class="fa fa-twitter"></i>
+              </a>
+             
+          </div>
+          <div class="copyright">
+              &copy; 2016 Matt Ayre
+          </div>
+      </div>
+  </footer>
+  </div> <!-- end wrapper -->
+<!-- insert modal -->
+<div class="project-content" id="project_1">
+  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+  <div>
+    <div class="project-details">
+      <div class="container">
+        <div class="project-title">
+            <h5>Cambodia<span>.</span></h5>
+            <h2>2013</h2>
+            <div class="separator-container">
+              <div class="separator line-separator">∎</div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-text">
+              <p>In 2013 I travelled to Cambodia. Cambodia's ancient name is "Kambuja". In 802 AD, Jayavarman II declared himself "King" and marked the beginning of the Khmer Empire which flourished for over 600 years, allowing successive kings to dominate much of Southeast Asia and accumulate immense power and wealth. The Indianized kingdom built monumental temples including Angkor Wat, now a World Heritage Site, and facilitated the spread of first Hinduism, then Buddhism to much of Southeast Asia. After the fall of Angkor to Ayutthaya in the 15th century, Cambodia was then ruled as a vassal between its neighbours.</p>
+              
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+               <script>CreateImage('cam1.jpg','Description of ');</script>
+                <script>CreateImage('cam2.jpg','Description of ');</script>
+                <script>CreateImage('cam3.jpg','Description of ');</script>
+                <script>CreateImage('cam4.jpg','Description of ');</script>
+                <script>CreateImage('cam5.jpg','Description of ');</script>
+                <script>CreateImage('cam6.jpg','Description of ');</script>
+                <script>CreateImage('cam7.jpg','Description of ');</script>
+                <script>CreateImage('cam8.jpg','Description of ');</script>
+                <script>CreateImage('cam9.jpg','Description of ');</script>
+                <script>CreateImage('cam10.jpg','Description of ');</script>
+                <script>CreateImage('cam11.jpg','Description of ');</script>
+                <script>CreateImage('cam12.jpg','Description of ');</script>
+                <script>CreateImage('cam13.jpg','Description of ');</script>
+                <script>CreateImage('cam14.jpg','Description of ');</script>
+                <script>CreateImage('cam15.jpg','Description of ');</script>
+                <script>CreateImage('cam16.jpg','Description of ');</script> 
+                <script>CreateImage('cam17.jpg','Description of ');</script>
+                <script>CreateImage('cam18.jpg','Description of ');</script>
+                <script>CreateImage('cam19.jpg','Description of ');</script>
+                <script>CreateImage('cam20.jpg','Description of ');</script>
+                <script>CreateImage('cam32.jpg','Description of ');</script>
+                <script>CreateImage('cam33.jpg','Description of ');</script>
+                <script>CreateImage('cam34.jpg','Description of ');</script>
+                <script>CreateImage('cam35.jpg','Description of ');</script>
+                <script>CreateImage('cam36.jpg','Description of ');</script>
+                <script>CreateImage('cam37.jpg','Description of ');</script>
+                <script>CreateImage('cam38.jpg','Description of ');</script>
+                <script>CreateImage('cam39.jpg','Description of ');</script>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="project-content" id="project_2">
+  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+  <div>
+    <div class="project-details">
+      <div class="container">
+        <div class="project-title">
+            <h5>Morrocco<span>.</span></h5>
+            <h2>2014</h2>
+            <div class="separator-container">
+              <div class="separator line-separator">∎</div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-text">
+              <p>The Kingdom of Morocco is the most westerly of the North African countries known as the Maghreb - the "Arab West". It has Atlantic and Mediterranean coastlines, a rugged mountain interior and a history of independence not shared by its neighbours.</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+                <script>CreateImage('mor4.jpg','Description of ');</script>
+                <script>CreateImage('mor3.jpg','Description of ');</script>
+                <script>CreateImage('mor2.jpg','Description of ');</script>
+                <script>CreateImage('mor1.jpg','Description of ');</script>
+                <script>CreateImage('mor6.jpg','Description of ');</script>
+                <script>CreateImage('mor7.jpg','Description of ');</script>
+                <script>CreateImage('mor8.jpg','Description of ');</script>
+                <script>CreateImage('mor9.jpg','Description of ');</script>
+                <script>CreateImage('mor10.jpg','Description of ');</script>
+                <script>CreateImage('mor11.jpg','Description of ');</script>
+                <script>CreateImage('mor12.jpg','Description of ');</script>
+                <script>CreateImage('mor13.jpg','Description of ');</script>
+                <script>CreateImage('mor14.jpg','Description of ');</script>
+                <script>CreateImage('mor15.jpg','Description of ');</script>
+                <script>CreateImage('mor16.jpg','Description of ');</script>
+                <script>CreateImage('mor17.jpg','Description of ');</script> 
+                <script>CreateImage('mor18.jpg','Description of ');</script>
+                <script>CreateImage('mor19.jpg','Description of ');</script>
+                <script>CreateImage('mor20.jpg','Description of ');</script>
+                <script>CreateImage('mor21.jpg','Description of ');</script>
+                <script>CreateImage('mor22.jpg','Description of ');</script>
+                <script>CreateImage('mor23.jpg','Description of ');</script>
+                <script>CreateImage('mor24.jpg','Description of ');</script>
+                <script>CreateImage('mor25.jpg','Description of ');</script>
+                <script>CreateImage('mor26.jpg','Description of ');</script> 
+                <script>CreateImage('mor27.jpg','Description of ');</script>
+                <script>CreateImage('mor28.jpg','Description of ');</script>
+                <script>CreateImage('mor29.jpg','Description of ');</script>
+                <script>CreateImage('mor30.jpg','Description of ');</script>
+                <script>CreateImage('mor5.jpg','Description of ');</script>
+                <script>CreateImage('mor31.jpg','Description of ');</script>
+                <script>CreateImage('mor32.jpg','Description of ');</script>
+                <script>CreateImage('mor33.jpg','Description of ');</script>
+                <script>CreateImage('mor34.jpg','Description of ');</script>
+                
+                 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="project-content" style="background-color:black" id="project_3">
+  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+  <div>
+    <div class="project-details" style="background-color:black">
+      <div class="container" >
+        <div class="project-title">
+            <h5>Autumn Colours<span>.</span></h5>
+            <h2>2014</h2>
+            <div class="separator-container">
+              <div class="separator line-separator">∎</div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-text">
+              <p>Formerly green leaves turn to brilliant shades of yellow, orange, and red. These color changes are the result of transformations in leaf pigments. The green pigment in leaves is chlorophyll. Chlorophyll absorbs red and blue light from the sunlight that falls on leaves.</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+                <script>CreateImage('aut31.jpg','Description of ');</script>
+                <script>CreateImage('aut5.jpg','Description of ');</script>
+                <script>CreateImage('aut1.jpg','Description of ');</script>
+                <script>CreateImage('aut4.jpg','Description of ');</script>
+                <script>CreateImage('aut2.jpg','Description of ');</script>
+                <script>CreateImage('aut7.jpg','Description of ');</script>
+                <script>CreateImage('aut8.jpg','Description of ');</script>
+                <script>CreateImage('aut9.jpg','Description of ');</script>
+                <script>CreateImage('aut10.jpg','Description of ');</script>
+                <script>CreateImage('aut11.jpg','Description of ');</script>
+                <script>CreateImage('aut12.jpg','Description of ');</script>
+                <script>CreateImage('aut32.jpg','Description of ');</script>
+                <script>CreateImage('aut33.jpg','Description of ');</script>
+                <script>CreateImage('aut34.jpg','Description of ');</script>
+                
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="project-content" id="project_4">
+  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+  <div>
+    <div class="project-details">
+      <div class="container">
+        <div class="project-title">
+            <h5>West Sussex<span>.</span></h5>
+            <h2>2012</h2>
+            <div class="separator-container">
+              <div class="separator line-separator">∎</div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-text">
+              <p>Sussex has three main geographic sub-regions, each oriented approximately east to west. In the south-west of the county lies the fertile and densely populated coastal plain. North of this lie the rolling chalk hills of the South Downs, beyond which lies the well-wooded Sussex Weald.</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+                <script>CreateImage('sus17.jpg','Description of ');</script>
+                <script>CreateImage('sus1.jpg','Description of ');</script>
+                <script>CreateImage('sus3.jpg','Description of ');</script>
+                <script>CreateImage('sus5.jpg','Description of ');</script>
+                <script>CreateImage('sus2.jpg','Description of ');</script>
+                <script>CreateImage('sus7.jpg','Description of ');</script>
+                <script>CreateImage('sus8.jpg','Description of ');</script>
+                <script>CreateImage('sus9.jpg','Description of ');</script>
+                <script>CreateImage('sus10.jpg','Description of ');</script>
+                <script>CreateImage('sus12.jpg','Description of ');</script>
+                <script>CreateImage('sus14.jpg','Description of ');</script>
+                <script>CreateImage('sus15.jpg','Description of ');</script> 
+                <script>CreateImage('sus16.jpg','Description of ');</script>
+                <script>CreateImage('sus18.jpg','Description of ');</script>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="project-content" id="project_5">
+  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+  <div>
+    <div class="project-details">
+      <div class="container">
+        <div class="project-title">
+            <h5>Wales<span>.</span></h5>
+            <h2>2012</h2>
+            <div class="separator-container">
+              <div class="separator line-separator">∎</div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-text">
+              <p>Wales is in the south-western part of the United Kingdom. From the east land border with England, by the Bristol Channel. Most  of Wales is mountainous with its highest peak - Snowdon, 1,085 meters above sea level</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+                <script>CreateImage('wal12.jpg','Description of ');</script>
+                <script>CreateImage('wal5.jpg','Description of ');</script>
+                <script>CreateImage('wal3.jpg','Description of ');</script>
+                <script>CreateImage('wal11.jpg','Description of ');</script>
+                <script>CreateImage('wal4.jpg','Description of ');</script>
+                <script>CreateImage('wal13.jpg','Description of ');</script>
+                <script>CreateImage('wal14.jpg','Description of ');</script>
+                <script>CreateImage('wal15.jpg','Description of ');</script>
+                <script>CreateImage('wal16.jpg','Description of ');</script>
+                <script>CreateImage('wal17.jpg','Description of ');</script>
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="project-content" id="project_7">
+  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+  <div>
+    <div class="project-details">
+      <div class="container">
+        <div class="project-title">
+            <h5>Experimental<span>.</span></h5>
+            <h2></h2>
+            <div class="separator-container">
+              <div class="separator line-separator">∎</div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-text">
+              <p>A collection of my various experimental and abstract pictures</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+                <script>CreateImage('exp2.jpg','Description of ');</script>
+                <script>CreateImage('exp3.jpg','Description of ');</script>
+                <script>CreateImage('exp4.jpg','Description of ');</script>
+                <script>CreateImage('exp5.jpg','Description of ');</script>
+                <script>CreateImage('exp6.jpg','Description of ');</script>
+                <script>CreateImage('exp7.jpg','Description of ');</script>
+                <script>CreateImage('exp8.jpg','Description of ');</script>
+                <script>CreateImage('exp9.jpg','Description of ');</script>
+                <script>CreateImage('exp10.jpg','Description of ');</script>
+                <script>CreateImage('exp11.jpg','Description of ');</script>
+                <script>CreateImage('exp12.jpg','Description of ');</script>
+                <script>CreateImage('exp13.jpg','Description of ');</script> 
+                <script>CreateImage('exp14.jpg','Description of ');</script>
+                <script>CreateImage('exp15.jpg','Description of ');</script>
+                <script>CreateImage('exp16.jpg','Description of ');</script>
+                <script>CreateImage('exp17.jpg','Description of ');</script>
+                <script>CreateImage('exp18.jpg','Description of ');</script>
+                <script>CreateImage('exp19.jpg','Description of ');</script>
+                <script>CreateImage('exp20.jpg','Description of ');</script>
+                <script>CreateImage('exp21.jpg','Description of ');</script>
+                <script>CreateImage('exp22.jpg','Description of ');</script>
+                <script>CreateImage('exp23.jpg','Description of ');</script>
+                <script>CreateImage('exp24.jpg','Description of ');</script>
+                <script>CreateImage('exp25.jpg','Description of ');</script>
+                <script>CreateImage('exp26.jpg','Description of ');</script>
+                <script>CreateImage('exp27.jpg','Description of ');</script>
+                <script>CreateImage('exp28.jpg','Description of ');</script>
+                
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="project-content" id="project_10">
+  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+  <div>
+    <div class="project-details">
+      <div class="container">
+        <div class="project-title">
+            <h5>Bangkok<span>.</span></h5>
+            <h2>2011</h2>
+            <div class="separator-container">
+              <div class="separator line-separator">∎</div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-text">
+              <p>Bangkok traces its roots to a small trading post during the Ayutthaya Kingdom in the 15th century, which eventually grew in size and became the site of two capital cities: Thonburi in 1768 and Rattanakosin in 1782. Bangkok was at the heart of Siam's (as Thailand used to be known) modernization, during the later 19th century, as the country faced pressures from the West. The city was the centre of Thailand's political struggles, throughout the 20th century, as the country abolished absolute monarchy, adopted constitutional rule and underwent numerous coups and several uprisings. The city grew rapidly during the 1960s through the 1980s and now exerts a significant impact among Thailand's politics, economy, education, media and modern society.</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+               <script>CreateImage('bank2.jpg','Description of ');</script>
+                <script>CreateImage('bank3.jpg','Description of ');</script>
+                <script>CreateImage('bank4.jpg','Description of ');</script>
+                <script>CreateImage('bank.jpg','Description of ');</script>
+                <script>CreateImage('bank5.jpg','Description of ');</script>
+                <script>CreateImage('bank6.jpg','Description of ');</script>
+                <script>CreateImage('bank7.jpg','Description of ');</script>
+                <script>CreateImage('bank8.jpg','Description of ');</script>
+                <script>CreateImage('bank9.jpg','Description of ');</script>
+                <script>CreateImage('bank10.jpg','Description of ');</script>
+                <script>CreateImage('bank11.jpg','Description of ');</script>
+                <script>CreateImage('bank12.jpg','Description of ');</script> 
+                <script>CreateImage('bank13.jpg','Description of ');</script>
+                <script>CreateImage('bank14.jpg','Description of ');</script>
+                <script>CreateImage('bank15.jpg','Description of ');</script>
+                <script>CreateImage('bank16.jpg','Description of ');</script>
+                <script>CreateImage('bank17.jpg','Description of ');</script>
+                <script>CreateImage('bank18.jpg','Description of ');</script>
+                <script>CreateImage('bank19.jpg','Description of ');</script>
+                <script>CreateImage('bank20.jpg','Description of ');</script>
+                <script>CreateImage('bank21.jpg','Description of ');</script> 
+                <script>CreateImage('bank22.jpg','Description of ');</script>
+                <script>CreateImage('bank23.jpg','Description of ');</script>
+                <script>CreateImage('bank24.jpg','Description of ');</script>
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="project-content" id="project_9">
+  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+  <div>
+    <div class="project-details">
+      <div class="container">
+        <div class="project-title">
+            <h5>Black N White<span>.</span></h5>
+            <h2></h2>
+            <div class="separator-container">
+              <div class="separator line-separator">∎</div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-text">
+              <p>A collection of some of my black and white photography</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+                <script>CreateImage('bnw21.jpg','Description of ');</script>
+                <script>CreateImage('bnw2.jpg','Description of ');</script>
+                <script>CreateImage('bnw3.jpg','Description of ');</script>
+                <script>CreateImage('bnw4.jpg','Description of ');</script>
+                <script>CreateImage('bnw7.jpg','Description of ');</script>
+                <script>CreateImage('bnw8.jpg','Description of ');</script>
+                <script>CreateImage('bnw9.jpg','Description of ');</script>
+                <script>CreateImage('bnw10.jpg','Description of ');</script>
+                <script>CreateImage('bnw11.jpg','Description of ');</script>
+                <script>CreateImage('bnw12.jpg','Description of ');</script>
+                <script>CreateImage('bnw13.jpg','Description of ');</script>
+                <script>CreateImage('bnw14.jpg','Description of ');</script> 
+                <script>CreateImage('bnw15.jpg','Description of ');</script>
+                <script>CreateImage('bnw16.jpg','Description of ');</script>
+                <script>CreateImage('bnw18.jpg','Description of ');</script>
+                <script>CreateImage('bnw19.jpg','Description of ');</script>
+                <script>CreateImage('bnw20.jpg','Description of ');</script>
+                <script>CreateImage('bnw1.jpg','Description of ');</script>
+                <script>CreateImage('bnw22.jpg','Description of ');</script> 
+                <script>CreateImage('bnw23.jpg','Description of ');</script>
+                <script>CreateImage('bnw24.jpg','Description of ');</script>
+                
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="project-content" id="project_8">
+  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+  <div>
+    <div class="project-details">
+      <div class="container">
+        <div class="project-title">
+            <h5>Thailand & Laos<span>.</span></h5>
+            <h2>2011</h2>
+            <div class="separator-container">
+              <div class="separator line-separator">∎</div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-text">
+              <p>Thailand and the laidback river lifestyle of Laos is a voyage of discovery, taking in the bright lights and tourist trails in Thailand, the age old charms of Luang Prabang in Laos and the temples of Vientiane I traveled down the mighty Mekong River and become immersed in the tranquillity of remote villages and friendly locals along the way.</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+                <script>CreateImage('thai2.jpg','Description of ');</script>
+                <script>CreateImage('thai3.jpg','Description of ');</script>
+                <script>CreateImage('thai4.jpg','Description of ');</script>
+                <script>CreateImage('thai5.jpg','Description of ');</script>
+                <script>CreateImage('thai6.jpg','Description of ');</script>
+                <script>CreateImage('thai7.jpg','Description of ');</script>
+            
+                <script>CreateImage('thai9.jpg','Description of ');</script>
+                <script>CreateImage('thai10.jpg','Description of ');</script>
+                <script>CreateImage('thai11.jpg','Description of ');</script>
+                <script>CreateImage('thai12.jpg','Description of ');</script>
+                
+                
+                <script>CreateImage('thai15.jpg','Description of ');</script>
+                <script>CreateImage('thai16.jpg','Description of ');</script>
+                <script>CreateImage('thai17.jpg','Description of ');</script>
+                <script>CreateImage('thai19.jpg','Description of ');</script>
+                <script>CreateImage('thai20.jpg','Description of ');</script>
+                <script>CreateImage('thai21.jpg','Description of ');</script>
+                <script>CreateImage('thai22.jpg','Description of ');</script>
+                <script>CreateImage('thai23.jpg','Description of ');</script>
+                <script>CreateImage('thai24.jpg','Description of ');</script>
+                <script>CreateImage('thai25.jpg','Description of ');</script>
+                <script>CreateImage('thai26.jpg','Description of ');</script>
+                <script>CreateImage('thai27.jpg','Description of ');</script>
+                <script>CreateImage('thai28.jpg','Description of ');</script>
+                <script>CreateImage('thai29.jpg','Description of ');</script>
+                <script>CreateImage('thai30.jpg','Description of ');</script>
+                <script>CreateImage('thai31.jpg','Description of ');</script>
+                <script>CreateImage('thai32.jpg','Description of ');</script>
+                
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="project-content" id="project_6">
+  <span class="icon-close"><i class="pe-7s-close-circle"></i></span>
+  <div>
+    <div class="project-details">
+      <div class="container">
+        <div class="project-title">
+            <h5>Cardiff<span>.</span></h5>
+            <h2>2014</h2>
+            <div class="separator-container">
+              <div class="separator line-separator">∎</div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-text">
+              <p>Rugged beaches have developed in the mainly low lying and reclaimed marshland on top of a Triassic landscape, on the coastal region of southern Wales.</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+                <script>CreateImage('car4.jpg','Description of ');</script>
+                <script>CreateImage('car3.jpg','Description of ');</script>
+                <script>CreateImage('car5.jpg','Description of ');</script>
+                <script>CreateImage('car2.jpg','Description of ');</script>
+                <script>CreateImage('car1.jpg','Description of ');</script>
+                <script>CreateImage('car7.jpg','Description of ');</script>
+                <script>CreateImage('car8.jpg','Description of ');</script>
+                <script>CreateImage('car9.jpg','Description of ');</script>
+                <script>CreateImage('car10.jpg','Description of ');</script>
+                <script>CreateImage('car11.jpg','Description of ');</script>
+                <script>CreateImage('car12.jpg','Description of ');</script>
+                <script>CreateImage('car13.jpg','Description of ');</script> 
+                <script>CreateImage('car14.jpg','Description of ');</script>
+                <script>CreateImage('car15.jpg','Description of ');</script>
+                 <script>CreateImage('car16.jpg','Description of ');</script>
+                <script>CreateImage('car17.jpg','Description of ');</script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+   <!--   core js files    -->
+   <script src="assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+   <script src="assets/js/bootstrap.js" type="text/javascript"></script>
+    
+    <!--   file for adding vertical points where we activate the elements animation   -->
+    <script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
+
+    <!--  js library for devices recognition -->
+    <script type="text/javascript" src="assets/js/modernizr.js"></script>
+    
+    <!--   file where we handle all the script from the Rubik page   -->
+    <script type="text/javascript" src="assets/js/rubick.js"></script>
+    
+    <!--  script for google maps     -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+</html>

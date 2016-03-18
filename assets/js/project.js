@@ -8,8 +8,8 @@ function OpenProject(button) {
 
     var projectTop = distanceTop - scrollTop; 
     var projectLeft = $project.offset().left;
-    var projectHeight = $project.innerHeight();
     var projectWidth = $project.innerWidth();
+    var projectHeight = $project.innerHeight();
     var projectHtml = '';
 
     modal = $('#project');
@@ -522,11 +522,11 @@ function OpenProject(button) {
     $(modal).html(projectHtml);
 
     $(modal).css({
-     'top'  :    projectTop,
-     'left' :    projectLeft, 
-     'width' :   projectWidth,
-     'height' :  projectHeight,
-     'z-index'  : '1032'
+        'top' : projectTop,
+        'left' : projectLeft, 
+        'width' : projectWidth,
+        'height' : projectHeight,
+        'z-index' : '1032'
     });
 
     $(modal).addClass('has-background');
@@ -536,21 +536,19 @@ function OpenProject(button) {
     },30);
 
     setTimeout(function(){
-       $('body').addClass('noscroll');
-       $(modal).addClass('scroll');
+        $('body').addClass('noscroll');
+        $(modal).addClass('scroll');
     },1000);
 
     $('.icon-close').click(function(){
-      $project_content = $(this).closest('.project-content');
-      $project_content.removeClass('open scroll');
-      
-      $('body').removeClass("noscroll");
-      //$('a').removeClass('no-opacity');
+        project_content = $('#project');
+        $(project_content).removeClass('open scroll');
+        $('body').removeClass("noscroll");
         setTimeout(function(){
-            $project_content.removeClass('has-background');
-            setTimeout(function(){    
-                $project_content.removeAttr('style');     
-            }, 450); 
+            $(project_content).removeClass('has-background');
+            $(project_content).css({
+                'z-index' : '-1'
+            });
         },500);
     });
 } 
