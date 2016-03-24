@@ -3919,7 +3919,7 @@ body.noscroll {
 }
 @media (max-width: 420px){
 .section-header .parallax, .section-header .full-image {
-    height: 50vh;
+    height: 90vh;
   }
 }
 @media (max-width: 768px){
@@ -3929,7 +3929,7 @@ body.noscroll {
 }
 @media (max-width: 420px){
   h1.responsive-small {
-    font-size: 2.7em !important;
+    font-size: 2.3em !important;
   }
 }
 
