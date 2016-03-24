@@ -3912,13 +3912,48 @@ body.noscroll {
     display: block !important;
   }
 }
-@media (max-width: 992px){
+@media (max-width: 768px){
 .section-header .parallax, .section-header .full-image {
     height: 100vh;
+  }
+}
+@media (max-width: 375px){
+.section-header .parallax, .section-header .full-image {
+    height: 60vh;
   }
 }
 @media (max-width: 768px){
   h1.responsive-small {
     font-size: 4em !important;
   }
+}
+@media (max-width: 375px){
+  h1.responsive-small {
+    font-size: 2.5em !important;
+  }
+}
+@media (max-width: 375px){
+  a.scroll-arrow {
+    display: none;
+    font-size: 0px;
+    color: white;
+    width: 50px;
+    line-height: 52px;
+    border-radius: 50%;
+    height: 50px;
+    border: 0px solid white;
+    
+    margin: 0 auto;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    z-index: 1029;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: .9;
+  }
+}
 }
